@@ -16,12 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let appSecret = "2de8d4d474b809af7724c72b"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        _ = SLJGServicer.shared.registAnalytics(appkey)
+        _ = SLJGServicer.shared
+            .registAnalytics(appkey)
+            .registShare(appKey: appkey, universalLink: "", wechatAppId: "", wechatAppSecret: "")
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         if SLJGServicer.shared.handleOpenURL(url: url, options: options) == false {
+            // 其他SDK的回调
+        }
+        return true
+    }
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if SLJGServicer.shared.handleUniversalLink(url: userActivity.webpageURL) == false {
             // 其他SDK的回调
         }
         return true

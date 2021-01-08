@@ -8,6 +8,20 @@
 import UIKit
 import CoreLocation
 
+/**
+ 1. 头文件
+    #import <UIKit/UIKit.h>
+    #import "JANALYTICSService.h"
+    如果需要使用idfa功能所需要引入的头文件（可选）
+    #import <AdSupport/AdSupport.h>
+ 2. AppDelegate
+     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+         if SLJGServicer.shared.handleOpenURL(url: url, options: options) == false {
+             // 其他SDK的回调
+         }
+         return true
+     }
+ */
 public protocol JGAnalyticsProtocol {
     /// 注册统计
     func registAnalytics(_ appKey: String) -> Self

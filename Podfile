@@ -8,5 +8,6 @@ target 'SLJGServicer' do
   pod 'JShare'
   pod 'JPush'
   pod 'Aspects'
+  pod 'SLSupportLibrary'
 
 end

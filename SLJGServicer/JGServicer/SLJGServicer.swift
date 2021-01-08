@@ -7,20 +7,14 @@
 
 import UIKit
 /**
- 1. 添加URL Schemes jiguang jiguang-AppKey
- 2. 头文件
-     // #import <UIKit/UIKit.h>
-     // 引入JAnalytics功能所需头文件
-     #import "JANALYTICSService.h"
-     // 如果需要使用idfa功能所需要引入的头文件（可选）
-     #import <AdSupport/AdSupport.h>
+ 添加URL Schemes jiguang jiguang-AppKey
  */
-public class SLJGServicer: NSObject, JGAnalyticsProtocol {
+public class SLJGServicer: NSObject, JGAnalyticsProtocol, JGShareProtocol {
     
     static let shared = SLJGServicer()
     private override init() { super.init() }
     
-    /// 注册友盟
+    /// 注册极光
     /// - Parameter appKey: AppKey
     func regist(_ appKey: String) -> SLJGServicer {
         return self
@@ -29,6 +23,9 @@ public class SLJGServicer: NSObject, JGAnalyticsProtocol {
 
 extension SLJGServicer {
     @objc func handleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-        JANALYTICSService.handle(url)
+        JANALYTICSService.handle(url) || JSHAREService.handleOpen(url)
+    }
+    @objc func handleUniversalLink(url: URL?) -> Bool {
+        JSHAREService.handleOpen(url)
     }
 }
