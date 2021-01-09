@@ -19,6 +19,8 @@ public protocol JGPushProtocol {
     func setPhone(_ phone: String?, complete: ((Bool) -> Void)?)
     /// 跳转设置页面
     func openSettingsForNotification()
+    /// 设置角标
+    func setBadge(_ num: Int)
     
     /// 可添加标签与别名,地理位置统计,地理围栏等接口
 }
@@ -70,5 +72,10 @@ public extension JGPushProtocol where Self: SLJGServicer {
         JPUSHService.openSettings { (_) in
             
         }
+    }
+    
+    func setBadge(_ num: Int) {
+        JPUSHService.setBadge(num)
+        UIApplication.shared.applicationIconBadgeNumber = num
     }
 }
