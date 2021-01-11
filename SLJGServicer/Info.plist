@@ -25,7 +25,7 @@
 			<string>jiguang</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>jiguang-3f630eb745c69f0dcf56ee54</string>
+				<string>jiguang-99846b6fcc88b4168c3fe69f</string>
 			</array>
 		</dict>
 		<dict>
@@ -35,7 +35,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxa2ea563906227379</string>
+				<string>wxac7f360237a214cc</string>
 			</array>
 		</dict>
 		<dict>
@@ -43,7 +43,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>SLJGServicer</string>
+				<string>myCommProject</string>
 			</array>
 		</dict>
 	</array>

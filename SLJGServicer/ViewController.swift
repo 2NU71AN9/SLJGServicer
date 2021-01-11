@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.touchesEnded(touches, with: event)
         let message = JSHAREMessage()
         message.text = "123123123123123"
+        message.mediaType = .text
         SLJGServicer.shared.share(message) { (isSuccess) in
             print("分享结果==>(isSuccess)")
         }

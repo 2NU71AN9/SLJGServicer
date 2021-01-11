@@ -9,7 +9,7 @@ import UIKit
 import PKHUD
 
 public protocol JGShareProtocol {
-    /// 注册
+    /// 注册, universalLink必须与微信开放平台设置的一样
     func registShare(appKey: String, universalLink: String, wechatAppId: String, wechatAppSecret: String) -> Self
     /// 获取用户在第三方平台的用户 ID、头像等资料完成账号体系的构建
     func getSocialUserInfo(platform: JSHAREPlatform, complete: @escaping ((JSHARESocialUserInfo?) -> Void))

@@ -12,13 +12,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let appkey = "3f630eb745c69f0dcf56ee54"
-    let appSecret = "eb89a20364a362aa9781fad1"
+    let appkey = "99846b6fcc88b4168c3fe69f" //"3f630eb745c69f0dcf56ee54" com.sl.SLJGServicer
+    let appSecret = "578613872257ee82cf246697" //"eb89a20364a362aa9781fad1"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         _ = SLJGServicer.shared
             .registAnalytics(appkey)
-            .registShare(appKey: appkey, universalLink: "", wechatAppId: "", wechatAppSecret: "")
+            .registShare(appKey: appkey, universalLink: "https://bo5k.t4m.cn/myCommProject/", wechatAppId: "wxac7f360237a214cc", wechatAppSecret: "08196524f27704095dbe7ece0d7dc304")
             .registPush(appKey: appkey, launchOptions: launchOptions)
         return true
     }
