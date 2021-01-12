@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -96,7 +96,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="view_gray1"/>
                     <constraints>
                         <constraint firstItem="41Q-iH-j6P" firstAttribute="top" secondItem="Bqu-1s-gJp" secondAttribute="top" constant="25" id="3mV-eb-2H1"/>
                         <constraint firstAttribute="trailing" secondItem="41Q-iH-j6P" secondAttribute="trailing" id="LBV-PD-eT9"/>
@@ -123,8 +123,8 @@
     <resources>
         <image name="wechat50" width="50" height="50"/>
         <image name="wechatTimeLine50" width="50" height="50"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="view_gray1">
+            <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

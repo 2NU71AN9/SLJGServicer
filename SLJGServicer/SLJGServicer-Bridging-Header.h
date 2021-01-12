@@ -6,10 +6,12 @@
 #import <JANALYTICSService.h>
 #import <JSHAREService.h>
 #import <JPUSHService.h>
-
-//#ifdef NSFoundationVersionNumber_iOS_9_x_Max
-//#import <UserNotifications/UserNotifications.h>
-//#endif
-
 // 如果需要使用idfa功能所需要引入的头文件（可选）
 //#import <AdSupport/AdSupport.h>
+
+#import <UMCommon/UMCommon.h>
+#import <UMShare/UMShare.h>
+#import <UShareUI/UShareUI.h>
+#import <UMPush/UMessage.h>
+//#import <UMCommonLog/UMCommonLogHeaders.h>
+#import <UMCommon/MobClick.h>
